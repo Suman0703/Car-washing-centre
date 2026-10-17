@@ -1,0 +1,90 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 clamp(20px, 6vw, 88px);
+  background: #0b4f9c;
+  box-shadow: 0 4px 16px rgb(7 42 83 / 18%);
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff;
+  color: #0b4f9c;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.site-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-navigation-link {
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #e8f3ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.site-navigation-link:hover,
+.site-navigation-link:focus-visible {
+  background: #fff;
+  color: #0b4f9c;
+}
+
+.site-brand:focus-visible,
+.site-navigation-link:focus-visible {
+  outline: 3px solid #9ed8ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    min-height: 64px;
+    gap: 8px;
+    padding-inline: 16px;
+  }
+
+  .site-brand {
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+
+  .site-brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .site-navigation {
+    gap: 0;
+  }
+
+  .site-navigation-link {
+    padding: 9px;
+    font-size: 0.9rem;
+  }
+}
